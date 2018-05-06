@@ -1,0 +1,14 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Framework\040of\040the\040decoupling\040method\040for\040reactive\040Euler\040equations}{}% 2
+\BOOKMARK [1][-]{section.3}{Dual\040Information\040Preserving\040method}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Numerical\040test\040for\040the\040DIP\040method}{section.3}% 4
+\BOOKMARK [1][-]{section.4}{Numerical\040perturbation\040method\040for\040reactive\040ordinary\040differential\040equations}{}% 5
+\BOOKMARK [2][-]{subsection.4.1}{The\040numerical\040perturbation\040schemes}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.2}{The\040stability\040analysis\040of\040the\040NP\040schemes}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.3}{Numerical\040comparison\040of\040different\040schemes}{section.4}% 8
+\BOOKMARK [1][-]{section.5}{Applications\040in\040the\040reactive\040Euler\040equations}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Numerical\040examples\040for\040scalar\040problems}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Simplified\040reactive\040Euler\040system}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{Multi-specise\040reactive\040Euler\040system}{section.5}% 12
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 13
+\BOOKMARK [1][-]{appendix.A}{The\040algorithm\040of\040the\040DIP\040method\040for\040solving\040the\040convection\040equations}{}% 14
