@@ -61,10 +61,9 @@ The ODE initial value problem
   \bm{y}'= \bm{f}(t,\bm{y}(t)), \hspace{0.3cm} \bm{y}(0)= \bm{y}_0,
   \end{equation}
   is considered in this paper. 
- Having a history over two centuries, developing numerical methods for the ODE equations seems to be an old topic.  However,  if ``some components of the solution decay much more rapidly than others'', the numercial methods will beset by the stiffness, which is still bothering us with stable and efficient problems in many physics, ecnomics and mathmatics systems.    
+  Having a history over two centuries, developing numerical methods for the ODE equations seems to be an old topic.  However, if ``some components of the solution decay much more rapidly than others''\cite{lambert1991numerical}, the numercial methods will beset by the stiffness, which is still bothering us with stable and efficient problems in many disciplines, for instance in simulating the  chemical kinetics and control theory.
 
-
-dely appears in  the goverving equation of many physical systems, such as chemical reaction and .  
+  About in the 1960s, explosion prosperity has happened in the study of the ODE equations. Especially the numerical stability researches done by Dahlquist, Hirshfelder and many other mathematicians, give a more clear glance at the numerical stiffness. Although there is no exact defination of ``stiffness'' till now, many important theories proposed in that period, such as the famous A-stability\cite{Germund1963A} and the following L-stability\cite{ehle1969pade} are powerful rulers to measure the stiff-stable property of the numerical methods. On the other hands,  
 
 
  In this paper, we try to develop a high-order stiff-stable explicit numerical method 
@@ -140,10 +139,6 @@ This research work was supported by NSFC 11272324, 11272325, NSAF U1530145 and 2
 \section*{References}
 
 \bibliography{mybibfile}
-
-\newpage
-  \appendix
-  \renewcommand{\appendixname}{Appendix~}
 
 \end{document}
 
