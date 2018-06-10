@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{lambert1991numerical}
+J.~D. Lambert, Numerical methods for ordinary differential systems: the initial
+  value problem, John Wiley \& Sons, Inc., 1991.
+
+\bibitem{Germund1963A}
+G.~G. Dahlquist, A special stability problem for linear multistep methods, Bit
+  Numerical Mathematics 3~(1) (1963) 27--43.
+
+\bibitem{ehle1969pade}
+B.~L. Ehle, On pad{\'e} approximations to the exponential function and a-stable
+  methods for the numerical solution of initial value problems, Ph.D. thesis,
+  University of Waterloo Waterloo, Ontario (1969).
+
+\end{thebibliography}

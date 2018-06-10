@@ -4,7 +4,7 @@
 \usepackage{color}
 \usepackage[colorlinks,linkcolor=black,hyperindex,CJKbookmarks,dvipdfm]{hyperref}
 \usepackage{tikz}
-\usepackage{graphics,graphicx}
+rusepackage{graphics,graphicx}
 \usepackage{mathrsfs}
 \usepackage{amsmath}
 \usepackage{subfigure}
@@ -63,7 +63,12 @@ The ODE initial value problem
   is considered in this paper. 
   Having a history over two centuries, developing numerical methods for the ODE equations seems to be an old topic.  However, if ``some components of the solution decay much more rapidly than others''\cite{lambert1991numerical}, the numercial methods will beset by the stiffness, which is still bothering us with stable and efficient problems in many disciplines, for instance in simulating the  chemical kinetics and control theory.
 
-  About in the 1960s, explosion prosperity has happened in the study of the ODE equations. Especially the numerical stability researches done by Dahlquist, Hirshfelder and many other mathematicians, give a more clear glance at the numerical stiffness. Although there is no exact defination of ``stiffness'' till now, many important theories proposed in that period, such as the famous A-stability\cite{Germund1963A} and the following L-stability\cite{ehle1969pade} are powerful rulers to measure the stiff-stable property of the numerical methods. On the other hands,  
+  About in the 1960s, explosion prosperity has happened in the study of the ODE equations. Especially the numerical stability researches done by Dahlquist, Hirshfelder and many other mathematicians, give a more clear glance at the numerical stiffness. Although it is still  difficult to define ``stiffness'' in a precise way, many important theories proposed in that period, such as the famous A-stability\cite{Germund1963A} and the following L-stability\cite{ehle1969pade}, are powerful rulers to measure the stiffness of equations and the stable property of a numerical method. With those theoritic study, a fact is revealed that the explicit one-step methods, for instance, the Runge-Kutta methods, and all the multistep methods cannot be A-stable. Under this background and with the popular use of one-step methods, espcially Runge-Kutta class of methods, nearly a common sense have been achieved, that if we want to solve stiff euqations with relatively large time steps, we must bear the cost of iteration in an implicit method, for the reason that only implicit methods can achieve both A-stability and high-order accuracy at the same time.  
+
+However, this statement may not be true beyond the frames of one-step and multistep method, we still can hope for an explicit A-stable method with high-order accuracy.  In fact, 
+
+
+
 
 
  In this paper, we try to develop a high-order stiff-stable explicit numerical method 
