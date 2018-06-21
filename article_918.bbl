@@ -18,4 +18,25 @@ B.~L. Ehle, On pad{\'e} approximations to the exponential function and a-stable
   methods for the numerical solution of initial value problems, Ph.D. thesis,
   University of Waterloo Waterloo, Ontario (1969).
 
+\bibitem{Wu1998A}
+X.~Y. Wu, A sixth-order a-stable explicit one-step method for stiff systems,
+  Computers & Mathematics with Applications 35~(9) (1998) 59–64.
+
+\bibitem{Wu2000The}
+X.~Y. Wu, J.~L. Xia, The vector form of a sixth-order a-stable explicit
+  one-step method for stiff problems, Computers & Mathematics with Applications
+  39~(3) (2000) 247--257.
+
+\bibitem{Barrio2005Performance}
+R.~Barrio, Performance of the taylor series method for odes/daes, Applied
+  Mathematics & Computation 163~(2) (2005) 525--545.
+
+\bibitem{Barrio2011Breaking}
+R.~Barrio, M.~Rodríguez, A.~Abad, F.~Blesa, Breaking the limits: The taylor
+  series method, Applied Mathematics & Computation 217~(20) (2011) 7940--7954.
+
+\bibitem{Liu2017The}
+L.~Liu, Y.~Shen, S.~Liu, M.~Yu, The dual information preserving method for
+  stiff reacting flows, Computers & Fluids 157.
+
 \end{thebibliography}
