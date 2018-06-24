@@ -65,10 +65,38 @@ The ODE initial value problem
 
   About in the 1960s, explosion prosperity has happened in the study of the ODE equations. Especially the numerical stability researches done by Dahlquist, Hirshfelder and many other mathematicians, give a more clear glance at the numerical stiffness. Although it is still  difficult to define ``stiffness'' in a precise way, many important theories proposed in that period, such as the famous A-stability\cite{Germund1963A} and the following L-stability\cite{ehle1969pade}, are powerful rulers to measure the stiffness of equations and the stable property of a numerical method. With those theoritic study, a fact is revealed that the explicit one-step methods, for instance, the Runge-Kutta methods, and all the multistep methods cannot be A-stable. Under this background and with the popular use of one-step methods, espcially Runge-Kutta class of methods, nearly a common sense have been achieved, that if we want to solve stiff equations stably  with relatively large steps, we must bear the cost of iteration in an implicit method, for the reason that only implicit methods can achieve both  the A-stability and the  high-order accuracy at the same time.  
 
-  However, this statement may not be true beyond the frames of the  one-step or the multistep methods. In fact, only linear methods have been thoroughly studied but few unlinear ODE methods have been considered. For this reason, some leaners still  hope to construct explicit A-stable methods in a special nonlinear way, which can  break the stablility-barrier of explicit methods and solve the stiff equations more easily. As an example,  Wu\cite{Wu1998A,Wu2000The} constructed a sixth-order A-stable explicit one-step method by adding an exponential term into the traditional Taylor series methods\cite{Barrio2005Performance,Barrio2011Breaking}. In our previous work \cite{Liu2017The}, a third-order A-stable numercal perturbation (NP) method has been proposed and used in solving  the stiff reacting ODE equations. But there is still no universal way to construct A-stable explicit method in every order. 
+  However, this statement may not be true beyond the frames of the  one-step or the multistep methods. In fact, only linear methods have been thoroughly studied but few unlinear ODE methods have been considered. For this reason, some leaners still  hope to construct explicit A-stable methods in a special nonlinear way, which can  break the stablility-barrier of explicit methods and solve the stiff equations more easily. As an example,  Wu\cite{Wu1998A,Wu2000The} constructed a sixth-order A-stable explicit one-step method by adding an exponential term into the traditional Taylor series methods\cite{Barrio2005Performance,Barrio2011Breaking}. In our previous work \cite{Liu2017The}, a third-order A-stable numercal perturbation (NP) method has been proposed and used in solving  the stiff reacting ODE equations. But there is still no universal way to construct A-stable explicit method in arbitrary orders. 
 
-In this paper, we give a general study of the numerical perturbation method. 
-     The main idea of constructing a numerical perturbation method for ODEs is as follows: \textcircled{\small{1}}       
+In this paper, we give a general study of the numerical perturbation method and construct 2nd-order to 7th-order A-stable one-step NP method. 
+The main  process of constructing a numerical perturbation method for ODEs is as follows: \textcircled{\small{1}} constructing a basic disretization scheme (the first-order explicit Euler scheme is used in this paper); \textcircled{\small{2}} constructing modified differential equations of the bacis disretization scheme by plusing a perturbation term which is power-series of $\Delta t$ with undetermined coefficients; \textcircled{\small{3}} using the original ODEs to obtain high-order derivatives; \textcircled{\small{4}} eliminating truncated errors in the modified differential equations by determing suitable coeffients in the perturbation term with the relations of high-order derivatives; \textcircled{\small{5}} transporting the coeffients to get the  A-stable property.               
+
+This paper is organized as follows. In section 2, we give a detailed construction processs of NP method. In section 3, 2nd-order to 7th-order NP schemes is constructed. In section 4, we study the stability of NP schemes. A series of numerical examples are used to test the actual performance of the NP method in section 5.  Conclutions are showned in section 6.   
+
+\section{The numerical perturbation method}
+The NP method was first proposed by Gao and co-workers to solve the convective-diffusion equations. The significant difficulty of the NP method is how  to get high-order derivatives of the original differential equations. For ODEs, every order derivative.can be obtained easily and mathematically.  Then the construct pocess is given as follows.
+
+\textcircled{\small{1}} The basic disretization scheme
+
+The simplest scheme to solve the ODEs (\ref{Eq:ode}) is the first order explicit Euler scheme
+\begin{equation}\label{frstod}
+  y_{n+1}-y_n=\Delta t f(t,y_n).
+\end{equation}
+And we use it as the  basic discretization scheme of the  NP schemes.
+
+\textcircled{\small{2}} Perturbation term
+
+In order to improve the accuracy orders of the basic discretization scheme (\ref{frstod}), one common way is to add substeps between $t$ and $t+\Delta t$. While  we choose a  very different and special way, adding  a perturbation term $p$ into the basic discretization scheme as
+  \begin{equation}
+  p(y_{n+1}-y_n)=\Delta t f(t,y_n).
+  \end{equation}
+Where $p$ is defined as
+\begin{equation}
+  p=1+\sum\limits_{i=1}^{\infty}a_i\Delta t^i,
+  \end{equation}
+and the $a_i$ are undetermined coefficients. 
+
+\textcircled{\small {3}} High-order derivatives
+
 
 
 
