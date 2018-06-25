@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.13)  22 JUN 2018 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.13)  25 JUN 2018 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -890,7 +890,19 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 LaTeX Warning: Reference `Eq:ode' on page 3 undefined on input line 80.
 
-[3]
+[3] [4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.157 
+      
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \par 
+l.157 
+      
+? 
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -899,10 +911,10 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115 \end{align}
+l.181 \end{align}
                  
 ? 
-[4] (./article_918.bbl
+[5] (./article_918.bbl [6]
 ! Misplaced alignment tab character &.
 l.23   Computers &
                    Mathematics with Applications 35~(9) (1998) 59â€“64.
@@ -910,7 +922,6 @@ l.23   Computers &
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
-[5]
 ! Misplaced alignment tab character &.
 l.27 ...tep method for stiff problems, Computers &
                                                    Mathematics with Applicat...
@@ -931,35 +942,43 @@ l.36   series method, Applied Mathematics &
 l.40   stiff reacting flows, Computers &
                                          Fluids 157.
 ? 
-) [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 198.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 198.
- (./article_918.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 198.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 198.
+) [7]
+
+! LaTeX Error: \begin{equation} on input line 154 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.264 \end{document}
+                    
+? 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
+(./article_918.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 Package rerunfilecheck Info: File `article_918.out' has not changed.
 (rerunfilecheck)             Checksum: 3F3FACCD38B9C5689C2031C9114A332A;298.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
  )
-(\end occurred inside a group at level 1)
+(\end occurred inside a group at level 2)
 
+### semi simple group (level 2) entered at line 154 (\begingroup)
 ### simple group (level 1) entered at line 43 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19803 strings out of 494497
- 366045 string characters out of 6172400
- 437949 words of memory out of 5000000
- 22810 multiletter control sequences out of 15000+600000
+ 19809 strings out of 494497
+ 366112 string characters out of 6172400
+ 441005 words of memory out of 5000000
+ 22811 multiletter control sequences out of 15000+600000
  15854 words of font info for 60 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 55i,9n,56p,1195b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,56p,1195b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -975,10 +994,10 @@ m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on article_918.pdf (6 pages, 185056 bytes).
+Output written on article_918.pdf (7 pages, 191330 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
+ 176 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

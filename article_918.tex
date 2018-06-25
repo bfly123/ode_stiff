@@ -81,12 +81,12 @@ The simplest scheme to solve the ODEs (\ref{Eq:ode}) is the first order explicit
 \begin{equation}\label{frstod}
   y_{n+1}-y_n=\Delta t f(t,y_n).
 \end{equation}
-And we use it as the  basic discretization scheme of the  NP schemes.
+And we use it as the  basic discretization scheme of the NP schemes.
 
 \textcircled{\small{2}} Perturbation term
 
 In order to improve the accuracy orders of the basic discretization scheme (\ref{frstod}), one common way is to add substeps between $t$ and $t+\Delta t$. While  we choose a  very different and special way, adding  a perturbation term $p$ into the basic discretization scheme as
-  \begin{equation}
+\begin{equation}\label{eq:pEuler}
   p(y_{n+1}-y_n)=\Delta t f(t,y_n).
   \end{equation}
 Where $p$ is defined as
@@ -96,6 +96,76 @@ Where $p$ is defined as
 and the $a_i$ are undetermined coefficients. 
 
 \textcircled{\small {3}} High-order derivatives
+
+For ODEs with a given $f(t,y)$, we need the dericatives beforehand. Different from Runge-Kutta methods, the final NP schemes changes with different $f(t,y)$. This step may increase some theoretical and preparatory work. Fortunately, it's very easy to get the  high-order dericatives from most ODEs.
+
+In a unified form the dericatives can given as,        
+\begin{equation}
+  \begin{aligned}
+  &\frac{dy}{dt} = f\\
+  &\frac{d^2y}{dt^2} = f_t'+f_y'f\\
+  &\frac{d^3y}{dt^3} = f_{tt}''+2f_{yt}''f+f_{yy}''f^2+{f_y'}^2f+f_y'f_t'\\
+  &\cdots
+\end{aligned}
+\end{equation}
+
+\textcircled{\small {4}} Suitable coefficients in perturbation term
+
+Using Taylor expasion, 
+\begin{equation}
+  y_{n+1}=y_n + \Delta t y_n' + \frac{\Delta t^2}{2} y_n'' + \frac{\Delta t^3}{6} y_n''' + O(\Delta t^4 )
+  \end{equation}
+Equation (\ref{eq:pEuler}) changes to
+\begin{equation}
+  \begin{aligned}
+  \frac{dy}{dt}=&f(t,y)-\left(\frac{1}{2}\frac{d^2y}{dt^2}+a_1\frac{dy}{dt}\right)\Delta t - \left( \frac{1}{6}\frac{d^3 y}{dt^3}+\frac{a_1}{2}\frac{d^2y}{dt^2}+a_2\frac{dy}{dt}\right) \Delta t^2 \\
+  -&\left(\frac{1}{24}\frac{d^4y}{dt^4}+\frac{a_1}{6}\frac{d^3y}{dt^3}+\frac{a_2}{2}\frac{d^2y}{dt^2}+a_3 \frac{dy}{dt}\right) \Delta t^3 +O(\Delta t^4) 
+  \end{aligned}
+  \end{equation}
+For convenience, the subscript $n$  in  $y_n$ is omitted. 
+
+  Clearly, if the second term in the right hand side becomes zero,
+\begin{equation}
+  \frac{1}{2}\frac{d^2y}{dt^2}+a_1\frac{dy}{dt}=0,
+  \end{equation}
+then equation (\ref{eq:pEuler}) has second-order accuracy. Similarly, we can get higher order schemes by elimination more terms, thus we have 
+\begin{equation}
+  \begin{aligned}
+	a_1 =&- \frac{y''}{2y'}\\
+	a_2=& \frac{y''^2}{4y'^2}-\frac{y'''}{6y'}\\
+	a_3=&-\frac{y^{(4)}}{24y'}-\frac{y''^3}{8y'^3}+\frac{y'''y''}{12y'^2}\\
+	\cdots
+	\end{aligned}
+	\end{equation}
+
+Then we can get the NP schemes as 
+\begin{equation}
+  y_{n+1}=y_n+\frac{\Delta tf(t,y_n)}{p},
+  \end{equation}
+where, $p=1+a_1 \Delta t +a_2\Delta t^2+\cdots$
+
+\textcircled{\small {5}} Transforming the coeffiecient $a_i$ 
+
+As far, we have get the NP schemes, however they maybe not have enough stability. Consdier a special linear ODE $f=qy$,  the dericatives are
+\begin{equation}
+  y^{(i)}= q^iy\hspace{0.3cm} i=1,2,\cdots.
+\end{equation}
+Then $a_i$ are
+\begin{equation}
+  a_1=-\frac{q}{2}\\
+  a_2=\frac{q^2}{12}\\
+  a_3=-\frac{q^3}{12}\\
+  \cdots
+  \end{equation}
+
+
+
+
+
+
+
+
+
 
 
 
