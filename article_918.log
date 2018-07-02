@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.13)  25 JUN 2018 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.13)  2 JUL 2018 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -894,15 +894,92 @@ LaTeX Warning: Reference `Eq:ode' on page 3 undefined on input line 80.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.157 
+l.170 	 \bm{Defination}
+                        \hspace{0.2cm} \bm{I } \hspace{0.3cm} A-stable
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.171 
       
 ? 
-! Display math should end with $$.
-<to be read again> 
-                   \par 
-l.157 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.175 	 \bm{Defination}
+                        \hspace{0.2cm} \bm{ II } \hspace{0.3cm} L-stable
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.176 
       
 ? 
+[5]
+Overfull \hbox (43.25432pt too wide) in paragraph at lines 206--218
+ [][] 
+ []
+
+<figure/2nd.png, id=125, 755.82375pt x 755.82375pt>
+File: figure/2nd.png Graphic file (type png)
+ <use figure/2nd.png>
+Package pdftex.def Info: figure/2nd.png used on input line 228.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/3rd.png, id=126, 755.82375pt x 755.82375pt>
+File: figure/3rd.png Graphic file (type png)
+ <use figure/3rd.png>
+Package pdftex.def Info: figure/3rd.png used on input line 230.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/4th.png, id=127, 755.82375pt x 755.82375pt>
+File: figure/4th.png Graphic file (type png)
+ <use figure/4th.png>
+Package pdftex.def Info: figure/4th.png used on input line 232.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/5th.png, id=128, 755.82375pt x 755.82375pt>
+File: figure/5th.png Graphic file (type png)
+ <use figure/5th.png>
+Package pdftex.def Info: figure/5th.png used on input line 234.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/6th.png, id=129, 755.82375pt x 755.82375pt>
+File: figure/6th.png Graphic file (type png)
+ <use figure/6th.png>
+Package pdftex.def Info: figure/6th.png used on input line 236.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/7th.png, id=130, 755.82375pt x 755.82375pt>
+File: figure/7th.png Graphic file (type png)
+ <use figure/7th.png>
+Package pdftex.def Info: figure/7th.png used on input line 238.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/Kuntzm6.png, id=131, 755.82375pt x 755.82375pt>
+File: figure/Kuntzm6.png Graphic file (type png)
+
+<use figure/Kuntzm6.png>
+Package pdftex.def Info: figure/Kuntzm6.png used on input line 240.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/Butcher4.png, id=132, 755.82375pt x 755.82375pt>
+File: figure/Butcher4.png Graphic file (type png)
+
+<use figure/Butcher4.png>
+Package pdftex.def Info: figure/Butcher4.png used on input line 242.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+
+<figure/Butcher6.png, id=133, 755.82375pt x 755.82375pt>
+File: figure/Butcher6.png Graphic file (type png)
+
+<use figure/Butcher6.png>
+Package pdftex.def Info: figure/Butcher6.png used on input line 244.
+(pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
+ [6] [7 <./figure/2nd.png (PNG copy)> <./figure/3rd.png (PNG copy)> <./figure/4
+th.png (PNG copy)> <./figure/5th.png (PNG copy)> <./figure/6th.png (PNG copy)> 
+<./figure/7th.png (PNG copy)> <./figure/Kuntzm6.png (PNG copy)> <./figure/Butch
+er4.png (PNG copy)> <./figure/Butcher6.png (PNG copy)>]
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -911,10 +988,10 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \end{align}
+l.300 \end{align}
                  
 ? 
-[5] (./article_918.bbl [6]
+[8] (./article_918.bbl
 ! Misplaced alignment tab character &.
 l.23   Computers &
                    Mathematics with Applications 35~(9) (1998) 59â€“64.
@@ -931,8 +1008,10 @@ l.27 ...tep method for stiff problems, Computers &
 l.32   Mathematics &
                      Computation 163~(2) (2005) 525--545.
 ? 
+[9]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
+
 ! Misplaced alignment tab character &.
 l.36   series method, Applied Mathematics &
                                             Computation 217~(20) (2011) 7940...
@@ -942,62 +1021,55 @@ l.36   series method, Applied Mathematics &
 l.40   stiff reacting flows, Computers &
                                          Fluids 157.
 ? 
-) [7]
-
-! LaTeX Error: \begin{equation} on input line 154 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.264 \end{document}
-                    
-? 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
-(./article_918.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
+) [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 383.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 383.
+ (./article_918.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 383.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 383.
 Package rerunfilecheck Info: File `article_918.out' has not changed.
-(rerunfilecheck)             Checksum: 3F3FACCD38B9C5689C2031C9114A332A;298.
+(rerunfilecheck)             Checksum: 23B6A2F0E8C8404B0BE6685E5783E7C5;757.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 383.
  )
-(\end occurred inside a group at level 2)
+(\end occurred inside a group at level 1)
 
-### semi simple group (level 2) entered at line 154 (\begingroup)
 ### simple group (level 1) entered at line 43 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19809 strings out of 494497
- 366112 string characters out of 6172400
- 441005 words of memory out of 5000000
- 22811 multiletter control sequences out of 15000+600000
- 15854 words of font info for 60 fonts, out of 8000000 for 9000
+ 19963 strings out of 494497
+ 368854 string characters out of 6172400
+ 445081 words of memory out of 5000000
+ 22924 multiletter control sequences out of 15000+600000
+ 18186 words of font info for 69 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 55i,9n,56p,1195b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,56p,1195b,1014s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on article_918.pdf (7 pages, 191330 bytes).
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on article_918.pdf (10 pages, 298267 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

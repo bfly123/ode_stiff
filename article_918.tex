@@ -28,7 +28,7 @@ rusepackage{graphics,graphicx}
 \definecolor{ColorMark}{rgb}{1,1,1}
 \numberwithin{equation}{section}
 \numberwithin{table}{section}
-\graphicspath{{picture/}} 
+\graphicspath{{figure/}} 
 \bibliographystyle{elsarticle-num}
 \begin{document}
 
@@ -138,29 +138,152 @@ then equation (\ref{eq:pEuler}) has second-order accuracy. Similarly, we can get
 	\end{aligned}
 	\end{equation}
 
-Then we can get the NP schemes as 
+Then we can get the N-th order NP schemes as 
 \begin{equation}
-  y_{n+1}=y_n+\frac{\Delta tf(t,y_n)}{p},
+  y_{n+1}=y_n+\frac{\Delta tf(t,y_n)}{p_N},
   \end{equation}
-where, $p=1+a_1 \Delta t +a_2\Delta t^2+\cdots$
+  where, $p=\sum_{i=1}^N 1+a_i \Delta t^i$
 
-\textcircled{\small {5}} Transforming the coeffiecient $a_i$ 
 
-As far, we have get the NP schemes, however they maybe not have enough stability. Consdier a special linear ODE $f=qy$,  the dericatives are
+  As far, we have constructed the NP schemes, however those schemes may not stable enough in every order. We still can do some skills to tranform $p_N$ with $\overline{p_N}$ to improve the stability, where
+\begin{equation}
+  \overline{p_N}= p_N+O(\Delta t^{n+1})
+  \end{equation}
+  and $\overline{p_N}$ is in the form of 
+\begin{equation}
+  \overline{p_N}= \frac{1+\sum_{i=1}^N b_i \Delta t^i}{1+\sum_{i=1}^N c_i\Delta t^i} 
+  \end{equation}
+  The construction of $b_i$ and $c_i$ will be talked in  the next section with the analysis of the stability. 
+  \section{Stable analysis of the NP schemes}  
+
+  \subsection{A-stable and L-stable}
+ In a Dahlquist test equation with $f(t,y)=qy$ , the solution of a method can be expressed as
+ \begin{equation}
+   y_{n+1} = R(h)x_n
+   \end{equation}
+   where, $h=q\Delta t$, and function $R(h)$ is called the stability function of the method. The set 
+   \begin{equation}
+	 S = \left\{ z\in \mathbb{C}; |R(h)| \le 1\right\}
+	 \end{equation}
+	 is called the stable domain of the method.
+
+	 \bm{Defination} \hspace{0.2cm} \bm{I } \hspace{0.3cm} A-stable 
+
+	 Methods are A-stable if the stable domain contains all the positive half-plane. 
+
+
+	 \bm{Defination} \hspace{0.2cm} \bm{ II } \hspace{0.3cm} L-stable 
+
+	  Methods are L-stable if they are A-stable and $R(h)\rightarrow 0$ as $h\rightarrow -\infty$
+
+	  \subsection{Stable functions of the NP schemes}
+In the ODE with  a linear $f(t,y) =qy$, the dericatives are in very simple forms as  
+
 \begin{equation}
   y^{(i)}= q^iy\hspace{0.3cm} i=1,2,\cdots.
 \end{equation}
+
 Then $a_i$ are
 \begin{equation}
-  a_1=-\frac{q}{2}\\
-  a_2=\frac{q^2}{12}\\
-  a_3=-\frac{q^3}{12}\\
+  \begin{aligned}
+  &a_1=-\frac{q}{2},
+  a_2=\frac{q^2}{12},
+  a_3=-\frac{q^3}{12},\\
+  &a_4=\frac{29q^4}{720},
+  a_5=-\frac{q^5}{72},
+  a_6=\frac{53q^6}{15120},
   \cdots
+  \end{aligned}
   \end{equation}
 
+The stability  functions of N-th order NP schemes are given as folllows in Table 1. As a comprasion,  stablity functions  of implicit Runge-Kutta methods are also given in the same table.
+
+\begin{table}[htbp]
+  \small 
+  \centering
+  \setlength{\belowcaptionskip}{10pt}
+  \caption{\small The stable functions of N-th order NP schemes} 
+  \begin{tabular}{llll}
+	\toprule
+	NP schemes  &$ R(h)$ & Implicit Runge-Kutta methods \cite{Hairer1987Solving}& $R(h)$\\
+	\midrule
+	2 & $\frac{1+h/2}{1-h/2}$& Implicit midpoint&  $\frac{1+h/2}{1-h/2}$ \\ 
+	3 & $\frac{1+h/2+h^2/12}{1-h/2+h^2/12}$ & Hammer-Hollingsw 4&  $\frac{1+h/2+h^2/12}{1-h/2+h^2/12}$ \\ 
+	4 & $\frac{1+h/2+h^2/12-h^3/12}{1-h/2+h^2/12-h^3/12}$ &Butcher's Lobatto 4& $\frac{1+3h/4+h^2/4+h^3/24}{1-h/4}$  \\
+	5 & $\frac{1+h/2+h^2/12-h^3/12+29h^4/720}{1-h/2+h^2/12-h^3/12+29h^4/720}$ &Kuntzm.-Butcher 6 & $\frac{1+h/2+h^2/10+h^3/120}{1-h/2+h^2/10-h^3/120}$\\
+	6 & $\frac{1+h/2+h^2/12-h^3/12+29h^4/720-h^5/72}{1-h/2+h^2/12-h^3/12+29h^4/720-h^5/72}$& Butcher's Lobatto 6 & $\frac{1+2h/3+h^2/5+h^3/30+h^4/360}{1-h/3+h^2/30}$\\
+	7 & $\frac{1+h/2+h^2/12-h^3/12+29h^4/720-h^5/72+53h^6/15120}{1-h/2+h^2/12-h^3/12+29h^4/720-h^5/72+53h^6/15120}$ &---&---\\
+	\bottomrule
+  \end{tabular}
+\end{table}
+\subsection{Stability domains of NP schemes}
+The stable domains of N-th order NP schemes and implicit Runge-Kutta methods are given in Fig.\ref{fig1}  We can see 2nd-order and 3rd-order NP schemes are A-stable and higher-order schemes also have large stability domains in the  positive half-plane. The NP schemes can approach  the stability  performance  of  the  implicit Runge-Kutta methods.  
+
+\begin{figure}
+  \centering
+  \begin{tikzpicture}
+\matrix[column sep=0mm, row sep=0mm]
+		{
+				\node[rectangle]{
+				  \includegraphics[width=5cm]{2nd.png}};&
+				\node[rectangle]{
+				  \includegraphics[width=5.cm]{3rd.png}};&
+				\node[rectangle]{
+	\includegraphics[width=5.cm]{4th.png}};\\
+				\node[rectangle]{
+				  \includegraphics[width=5.cm]{5th.png}};&
+				  \node[rectangle]{
+					\includegraphics[width=5.cm]{6th.png}};&
+				\node[rectangle]{
+				  \includegraphics[width=5cm]{7th.png}};\\
+				\node[rectangle]{
+				  \includegraphics[width=5cm]{Kuntzm6.png}};&
+				\node[rectangle]{
+				  \includegraphics[width=5cm]{Butcher4.png}};&
+				\node[rectangle]{
+				  \includegraphics[width=5cm]{Butcher6.png}};\\
+		};
+	\end{tikzpicture}
+	\caption{Stability domains for NP schemes }
+	\label{fig1}
+\end{figure}
+\section{Transformed coefficients NP method}  
+Although the NP schemes have  the similar stability with the implicit Runge-Kutta schemes, but none of them reaches L-stability. We still hope for a more stable property of NP method.     
+A possible way is  to construct a new perturbation term $\overline{p_N}$ by  transforming  the coeffients in it.
+
+As $p_N = p + O(\Delta t^{N+1})$, if $\overline{p_N}= p_N + O(\Delta t^{N+1})$, the new NP scheme has the same truction error order with the old one. Here, we  assume the new $\overline{p_3}$ with the form
+\begin{equation}
+  \overline{p_N} = \frac{ 1+ b_1 \Delta t+  b_2\Delta t +\cdots +b_{N-1}\Delta t^{N-1}}{1+c_1\Delta t +c_2\Delta_t^2 +\cdots c_{N-3}\Delta t^{N-3}-b_N \Delta t^{N-2}}.
+  \end{equation}
+  Here we have $2N-4$  coeffients and $N-1$  power series relations, so there are $N-3$ coeffients unditermined. In follows, we will consider the  transformed  NP method in different orders.    
+
+  \subsection{ The third-order transformed NP method}
+The second order method  has too little coeffients, there is no space for transform, so we begin with the third-order method. For the third-order method with $p_3$, there is no  unditermined coefficients,  the new 
+\begin{equation}
+\overline{p_3} =
+ \frac{ 1+ b_1 \Delta t+ b_2\Delta t}{1-b_2 \Delta t^2}= 1+a_1\Delta t +a_2 \Delta t^2 + O(\Delta t^3).
+\end{equation}
+Then the transformed coeffients $b_1$ and $b_2$ can be solved as
+\begin{equation}
+  b_1= a_1+ \frac{a_2}{1+a_1},\hspace{0.3cm}  b_2=\frac{a_2}{1+a_1}
+\end{equation}
+
+It is easy to get the stability function as 
+\begin{equation}
+  R(h) = \frac{1+2h/3}{1-h/3+h^2/6}
+\end{equation}
+
+\subsection{The fourth-order transformed NP method}
+The 
 
 
 
+
+
+
+\begin{equation}
+ \frac{ 1+ b_1 \Delta t+ b_2\Delta t}{1-b_2 \Delta t}= 1+a_1 \Delta t +a_2\Delta t^2 +O(\Delta t^3)
+  \end{equation}
 
 
 

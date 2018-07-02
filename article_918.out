@@ -1,5 +1,11 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{The numerical perturbation method}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{The Taylor series method}{section.2}% 3
-\BOOKMARK [1][-]{section.3}{Numerical perturbation method}{}% 4
-\BOOKMARK [1][-]{section.4}{Conclusions}{}% 5
+\BOOKMARK [1][-]{section.3}{Stable analysis of the NP schemes}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{A-stable and L-stable}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Stable functions of the NP schemes}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Stability domains of NP schemes}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Transformed coefficients NP method}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{ The third-order transformed NP method}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{The Taylor series method}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{Numerical perturbation method}{}% 10
+\BOOKMARK [1][-]{section.6}{Conclusions}{}% 11
