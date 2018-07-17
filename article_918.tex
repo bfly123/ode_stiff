@@ -32,7 +32,6 @@ rusepackage{graphics,graphicx}
 \bibliographystyle{elsarticle-num}
 \begin{document}
 
-
 \title{A third-order explicit numerical scheme for stiff ODE equations and it use in **equations }
 \author{Li Liu$^1$}
 \author{Yiqing Shen$^{1,2}$ \corref{mycorrespondingauthor}}
@@ -248,79 +247,214 @@ The stable domains of N-th order NP schemes and implicit Runge-Kutta methods are
 	\label{fig1}
 \end{figure}
 \section{Transformed coefficients NP method}  
-Although the NP schemes have  the similar stability with the implicit Runge-Kutta schemes, but none of them reaches L-stability. We still hope for a more stable property of NP method.     
-A possible way is  to construct a new perturbation term $\overline{p_N}$ by  transforming  the coeffients in it.
+Although the NP methods have  the similar stability with the implicit Runge-Kutta methods, but  not all of them can  achieve  A-stability and none of them reaches L-stability. We still hope for a more stable property of NP method.     
+A possible way is  to construct a new perturbation term $\overline{p_N}$ by transforming  the coeffients in it.
 
-As $p_N = p + O(\Delta t^{N})$, if $\overline{p_N}= p_N + O(\Delta t^{N})$, the new NP scheme has the same truction error order with the old one. Here, we  assume the new $\overline{p_3}$ with the form
+As $p_N = p + O(\Delta t^{N})$, if $\overline{p_N}= p_N + O(\Delta t^{N})$, the new NP scheme has the same truction error order with the old one. Here, we  assume the new $\overline{p_N}$ with the form
 \begin{equation}
   \overline{p_N} = \frac{ 1+ b_1 \Delta t+  b_2\Delta t +\cdots +b_{N-1}\Delta t^{N-1}}{1+c_1\Delta t +c_2\Delta_t^2 +\cdots+ c_{N-2}\Delta t^{N-2}}.
   \end{equation}
 and 
-\begin{equation}
-  c_{N-2}=-\frac{y}{f}b_{N-1}
-  \end{equation}
-  Here we have $2N-4$ coeffients and $N-1$  power series relations, so there are $N-3$ coeffients unditermined. In follows, we will consider the  transformed  NP method in different orders.    
+  $c_{N-2}=-b_{N-1}/f_y'$.
+  Here we have $2N-4$ coeffients and $N-1$ power series relations, so $N-3$ coeffients are  unditermined. In follows, we will consider the transformed  NP method in different orders.    
 
   \subsection{ The third-order transformed NP method}
-The second order method  has too little coeffients, there is no space for transform, so we begin with the third-order method. For the third-order method with $p_3$, there is no  undetermined coefficients,  the new 
+The second order method has too little coeffcients, there is no space to  transform, so we begin with the third-order method. For the third-order method with $p_3$, there is no undetermined coefficients,  the new 
 \begin{equation}
 \overline{p_3} =
 \frac{ 1+ b_1 \Delta t+ b_2\Delta t^2}{1+c_1 \Delta t} = 1+a_1\Delta t +a_2 \Delta t^2 + O(\Delta t^3),
 \end{equation}
-where $c_1=-b_2 y/f$.
-
-Then the transformed coeffients $b_1$ and $b_2$ can be solved as
+where $c_1=-b_2 /f_y'$. The transformed coeffcients can be solved by the relations
 \begin{equation}
-  b_1= a_1+ \frac{a_2}{1+a_1y/f},\hspace{0.3cm}  b_2=\frac{a_2}{1+a_1y/f}
+  \begin{aligned}
+	&b_1=a_1+c_1\\
+	&b_2=a_2+a_1c_1\\
+	\end{aligned}
+\end{equation}
+
+Then the transformed coeffients $b_1$ and $b_2$ are  
+\begin{equation}
+  b_1= a_1- \frac{a_2}{f_y'+a_1},\hspace{0.3cm}  b_2=\frac{a_2}{1+a_1/f_y'}
 \end{equation}
 
 It is easy to get the stability function as 
 \begin{equation}
-  R(h) = \frac{1+2h/3}{1-h/3+h^2/6}
+  R(h) = \frac{1+h/3}{1-2h/3+h^2/6}
 \end{equation}
 
 \subsection{The fourth-order transformed NP method}
-The perturbation term for  the fourth-order NP method is in the  form of
+The perturbation term for  the fourth-order NP method is in the  form 
 \begin{equation}
   \overline{p_4} = \frac{1+b_1 \Delta t + b_2 \Delta t^2 +b_3\Delta t^3}{1+c_1 \Delta t +c_2 \Delta t^2}
   \end{equation}
   and 
-  \begin{equation}
-	c_2= -b_3y/f
-	\end{equation}
-Through the relation of 
+$	c_2= -b_3/f_y'$.
+By  the relation 
 \begin{equation}
-  \overline{p_4}= 1+a_1 \Delta t + a_2\Delta t^2 +a_3\Delta t^3 +O(\Delta t^4),
+  \overline{p_4}= 1+a_1 \Delta t + a_2\Delta t^2 +a_3\Delta t^3 +O(\Delta t^4).
   \end{equation}
-the transformed coefficients are obtained  as follows
+We can get the relations
 \begin{equation}
-  b_1= a_1+ c_1, \hspace{0.3cm} b_2= a_2+a_1c_1 -\frac{a_3+c_1a_2}{a_1y/f+1}, \hspace{0.3cm} b_3=  \frac{a_3+c_1 a_2}{a_1y/f+1}
+  \begin{aligned}
+  b_1= a_1+ c_1\\
+  b_2= a_2+a_1c_1 +c_2\\
+  b_3= a_3+a_2c_1+a_1c_2\\
+  \end{aligned}
   \end{equation}
-
- For   the fourth-order transformed NP method the $c_1$ is an undetermined coefficient, and we choose  $c_1 = -4a_1 $ in this paper. The stability function is given as 
+ In  the 4th-order method the $c_1$ is undetermined, we set  $c_1 = -6a_1$.  Then the transformed coefficients are
+ \begin{equation}
+   \begin{aligned}
+   &c_1=-6a_1,c_2=-b_3/f_y'\\
+   &b_1=-5a_1, b_2=a_2-6a_1^2-\frac{a_3-6a_1a_2}{f_y'+a_1}, b_3=\frac{a_3-6a_1a_2}{1+a_1/f_y'}
+   \end{aligned}
+   \end{equation}
+t 
+ The stability function is given as 
   \begin{equation}
-	R(h)=\frac{1+5h/2+11h^2/12}{1+3h/2-13h^2/12+h^3/6}
+	R(h)=\frac{1+7h/2+5h^2/4}{1+5h/2-7h^2/4+h^3/3}
 	\end{equation}
-	\subsection{The fifth-order, sixth-order and seventh-order  transformed NP methods}
+	\subsection{The fifth-order transformed NP methods}
 The perturbation term for the fifth-order NP method is
 \begin{equation}
   \overline{p_5} = \frac{1+b_1 \Delta t + b_2 \Delta t^2 +b_3\Delta t^3 +b_4\Delta t^4 }{1+c_1 \Delta t+c_2 \Delta t^2 +c_3 \Delta t^3},
   \end{equation}
-  and $c_3=-b_5 y/f$.
+  and $c_3=-b_4 /f_y'$.
+The transformed coefficients are obtained as follows
+\begin{equation}
+  \begin{aligned}
+  &b_1=a_1+c_1\\
+  &b_2=a_2+a_1c_1+c_2\\
+  &b_3=a_3+a_2c_1+a_1c_2+c_3\\
+  &b_4=a_4+a_3c_1+a_2c_2+a_1c_3\\
+  \end{aligned}
+ \end{equation}
+We set the undetermined coefficients  as $c_1= -6a_1, c_2=-144a_2$. Then the transformed coefficients are get as
+\begin{equation}
+  \begin{aligned}
+	&c_1=-6a_1, c_2=-144a_2, c_3=-b_4/f_y'\\
+	&b_1=-5a_1, b_2=-6a_1^2-143a_2,  b_3=a_3-150a_1a_2- \frac{a_4-4a_1a_3+29a_2^2}{f_y'+a_1} ,b_4=\frac{a_4-6a_1a_3-144a_2^2}{1+a_1/f_y'}  \\
+	\end{aligned}
+	\end{equation}
+
+
+
+The stability function is
+ \begin{equation}
+   R(h)=\frac{1+7h/2-125h^2/12-1229h^3/360}{1+5h/2-161h^2/12+3091h^3/360-871h^4/360}
+   \end{equation}
+   \subsection{The  sixth-order transformed NP method} 
+The perturbation term for the sixth-order NP method is
+\begin{equation}
+  \overline{p_6} = \frac{1+b_1 \Delta t + b_2 \Delta t^2 +b_3\Delta t^3+b_4\Delta t^4 +b_5 \Delta t^5}{1+c_1 \Delta t +c_2 \Delta t^2+c_3 \Delta t^3 +c_4 \Delta t^4}
+  \end{equation}
+  and 
+$c_4= -b_5/f_y'$
+The transformed coefficients are obtained as follows
+\begin{equation}
+  \begin{aligned}
+  &b_1=a_1+c_1\\
+  &b_2=a_2+a_1c_1+c_2\\
+  &b_3=a_3+a_2c_1+a_1c_2+c_3\\
+  &b_4=a_4+a_3c_1+a_2c_2+a_1c_3+c_4\\
+  &b_5=a_5+a_4c_1+a_3c_2+a_2c_3+a_1c_4\\
+  \end{aligned}
+ \end{equation}
+We use the undetermined coefficients $c_1=-6a_1,c_2=144a_2$,and $c_3=600a_3$. Then the stability function is
+\begin{equation}
+  R(h)=\frac{1+7h/2-125h/12-263h^3/6-2029h^4/144}{1+5h/2-161h^2/12-335h^3/6+5171h^4/144-3643h^5/360}
+  \end{equation}
+
+	\subsection{The  seven-order transformed NP methods}
+\begin{equation}
+  \overline{p_7} = \frac{1+b_1 \Delta t + b_2 \Delta t^2 +b_3\Delta t^3 +b_4\Delta t^4  +b_5 \Delta t^5 +b_6\Delta t^6}{1+c_1 \Delta t+c_2 \Delta t^2 +c_3 \Delta t^3+c_4 \Delta t^4 +c_5 \Delta t^5},
+  \end{equation}
+  and $c_5=-b_6 /f_y'$.
 The transformed coefficients are obtained as follows
 \begin{equation}
   \begin{aligned}
   &b_1=a_1+c_1\\
   &b_2=a_2+a_1c_1\\
   &b_3=a_3+a_2c_1+a_1c_2+c_3\\
-  &b_4=a_4+a_3c_1+c_2a_2+c_3a_1\\
+  &b_4=a_4+a_3c_1+a_2c_2+a_1c_3+c_4\\
+  &b_5=a_5+a_4c_1+a_3c_2+a_2c_3+a_1c_4+c_5\\
+  &b_6=a_6+a_5c_1+a_4c_2+a_3c_3+a_2c_4+a_1c_5\\
   \end{aligned}
  \end{equation}
- There are two undetermined coefficients, we set them as $c_1= -4a_1, c_2=a_2$ and the stability function is
- \begin{equation}
+The undetermined coefficients are set as  $c_1=-6a_1,c_2=144a_2, c_3=-144a_3$ and $c_4=1440a_4$. The stability function is 
+\begin{equation}
+  R(h)=
+  \frac{1+7h/2+163h^2/12+109h^3/6+39449h^4/720+52063h^5/3024}{1+5h/2+127h^2/12+37h^3/6+30809h^4/720-15207h^5/494+52091h^6/7560}
+\end{equation}
+\section{The stability analysis of the transformed NP method}
+The stability functions  of the transformed NP methods are  collected in Table \ref{tab:2}, and the stablility domains are showed in Fig.\ref{fig2}.  It is  obviously that all the 3rd-order to 7th-order transformed NP methods are A-stable and L-stable and their unstability domains are limited in finite regions.
 
 
 
+\begin{table}[htbp]
+  \small 
+  \centering
+  \setlength{\belowcaptionskip}{10pt}
+  \caption{\small The stable functions of N-th order transformed  NP methods} 
+  \begin{tabular}{ll}
+	\toprule
+Order & $R(h)$\\
+\midrule
+3 & $\frac{1+h/3}{1-2h/3+h^2/6}$\\
+4& $\frac{1+7h/2+5h^2/4}{1+5h/2-7h^2/4+h^3/3}$\\
+5 & $\frac{1+7h/2-125h^2/12-1229h^3/360}{1+5h/2-161h^2/12+3091h^3/360-871h^4/360}$\\
+6& $\frac{1+7h/2-125h/12-263h^3/6-2029h^4/144}{1+5h/2-161h^2/12-335h^3/6+5171h^4/144-3643h^5/360}$\\
+7 & $
+  \frac{1+7h/2+163h^2/12+109h^3/6+39449h^4/720+52063h^5/3024}{1+5h/2+127h^2/12+37h^3/6+30809h^4/720-15207h^5/494+52091h^6/7560}$\\
+  \bottomrule
+\end{tabular}\label{tab:2}
+\end{table}
+
+
+\begin{figure}
+  \centering
+				  \includegraphics[width=5cm]{3rd_tran.png}
+				  \includegraphics[width=5.cm]{4th_tran.png}
+					\includegraphics[width=5.cm]{5th_tran.png}}
+
+					\centering
+				  \includegraphics[width=5.cm]{6th_tran.png}
+				  \includegraphics[width=5cm]{7th_tran.png}
+	\caption{Stability domains for the transformed NP methods }
+	\label{fig2}
+\end{figure}
+
+
+\section{Numerical tests for the NP methods and the transformed NP methods}
+Some numerical tests are considered in this section. There are two purposes, one is to show the construction process of the NP methods in  the real coding and using background as the new methods are far from the methods frequently used; the other one purpose is to test the real performance of the new method espcially in the  computing of the nolinear ODE and ODEs.
+
+Example 1 \cite{Seinfeld1970Review,Prothero1974On}
+
+\begin{equation} \label{eq:3}
+  \begin{aligned}
+	&y'(x)=g'(x)+\lambda (y-g(x)), \hspace{0.3cm} y=g(0) \hspace{0.1cm}  \text{at} \hspace{0.1cm} x=0\\
+	&g(x)=10-(10+x)e^{-x},  \hspace{0.3cm} \lambda \hspace{0.1cm} \text{real}.
+  \end{aligned}
+  \end{equation}
+
+  In this example we consider the order changing  with different stiffness which determined  by $\Delta x \lambda$. For the method without stiff stability, the order will drop significantly when $\Delta x \lambda$ is large. 
+
+  For Eq.(\ref{eq:3}) the high-order derivatives are
+\begin{equation}
+  y^{(n)}=g^{(n)}+\lambda (y^{(n-1)}-g^{(n-1)}) , \hspace{0.3cm} n=2,3,\cdots
+  y'=(9+x)e^{-x}+\lambda [y-10+(10+x)]e^{-x}\\
+  y''=(9+x)e^{-x}+\lambda [y-10+(10+x)]e^{-x}\\
+\end{equation}
+and
+\begin{equation}
+  \begin{aligned}
+  &g'=(9+x)e^{-x},
+  g''=-(8+x)e^{-x},
+  g^{(3)}=(7+x)e^{-x}\\
+  &g^{(4)}=-(6+x)e^{-x},
+  g^{(5)}=(5+x)e^{-x},
+  g^{(6)}=-(4+x)e^{-x}.\\
+  \end{aligned}
+  \end{equation}
 
 
 

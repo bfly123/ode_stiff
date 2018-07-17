@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.13)  3 JUL 2018 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.13)  17 JUL 2018 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -862,124 +862,174 @@ LaTeX Info: Redefining \nameref on input line 33.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 57.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 57.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [2
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
 
 
-LaTeX Warning: Reference `Eq:ode' on page 3 undefined on input line 80.
+LaTeX Warning: Reference `Eq:ode' on page 3 undefined on input line 79.
 
 [3] [4]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.170 	 \bm{Defination}
+l.169 	 \bm{Defination}
                         \hspace{0.2cm} \bm{I } \hspace{0.3cm} A-stable
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.171 
+l.170 
       
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.175 	 \bm{Defination}
+l.174 	 \bm{Defination}
                         \hspace{0.2cm} \bm{ II } \hspace{0.3cm} L-stable
 ? 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.176 
+l.175 
       
 ? 
 [5]
-Overfull \hbox (43.25432pt too wide) in paragraph at lines 206--218
+Overfull \hbox (43.25432pt too wide) in paragraph at lines 205--217
  [][] 
  []
 
-<figure/2nd.png, id=133, 755.82375pt x 755.82375pt>
+<figure/2nd.png, id=149, 755.82375pt x 755.82375pt>
 File: figure/2nd.png Graphic file (type png)
  <use figure/2nd.png>
-Package pdftex.def Info: figure/2nd.png used on input line 228.
+Package pdftex.def Info: figure/2nd.png used on input line 227.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/3rd.png, id=134, 755.82375pt x 755.82375pt>
+<figure/3rd.png, id=150, 755.82375pt x 755.82375pt>
 File: figure/3rd.png Graphic file (type png)
  <use figure/3rd.png>
-Package pdftex.def Info: figure/3rd.png used on input line 230.
+Package pdftex.def Info: figure/3rd.png used on input line 229.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/4th.png, id=135, 755.82375pt x 755.82375pt>
+<figure/4th.png, id=151, 755.82375pt x 755.82375pt>
 File: figure/4th.png Graphic file (type png)
  <use figure/4th.png>
-Package pdftex.def Info: figure/4th.png used on input line 232.
+Package pdftex.def Info: figure/4th.png used on input line 231.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/5th.png, id=136, 755.82375pt x 755.82375pt>
+<figure/5th.png, id=152, 755.82375pt x 755.82375pt>
 File: figure/5th.png Graphic file (type png)
  <use figure/5th.png>
-Package pdftex.def Info: figure/5th.png used on input line 234.
+Package pdftex.def Info: figure/5th.png used on input line 233.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/6th.png, id=137, 755.82375pt x 755.82375pt>
+<figure/6th.png, id=153, 755.82375pt x 755.82375pt>
 File: figure/6th.png Graphic file (type png)
  <use figure/6th.png>
-Package pdftex.def Info: figure/6th.png used on input line 236.
+Package pdftex.def Info: figure/6th.png used on input line 235.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/7th.png, id=138, 755.82375pt x 755.82375pt>
+<figure/7th.png, id=154, 755.82375pt x 755.82375pt>
 File: figure/7th.png Graphic file (type png)
  <use figure/7th.png>
-Package pdftex.def Info: figure/7th.png used on input line 238.
+Package pdftex.def Info: figure/7th.png used on input line 237.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/Kuntzm6.png, id=139, 755.82375pt x 755.82375pt>
+<figure/Kuntzm6.png, id=155, 755.82375pt x 755.82375pt>
 File: figure/Kuntzm6.png Graphic file (type png)
 
 <use figure/Kuntzm6.png>
-Package pdftex.def Info: figure/Kuntzm6.png used on input line 240.
+Package pdftex.def Info: figure/Kuntzm6.png used on input line 239.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/Butcher4.png, id=140, 755.82375pt x 755.82375pt>
+<figure/Butcher4.png, id=156, 755.82375pt x 755.82375pt>
 File: figure/Butcher4.png Graphic file (type png)
 
 <use figure/Butcher4.png>
-Package pdftex.def Info: figure/Butcher4.png used on input line 242.
+Package pdftex.def Info: figure/Butcher4.png used on input line 241.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
 
-<figure/Butcher6.png, id=141, 755.82375pt x 755.82375pt>
+<figure/Butcher6.png, id=157, 755.82375pt x 755.82375pt>
 File: figure/Butcher6.png Graphic file (type png)
 
 <use figure/Butcher6.png>
-Package pdftex.def Info: figure/Butcher6.png used on input line 244.
+Package pdftex.def Info: figure/Butcher6.png used on input line 243.
 (pdftex.def)             Requested size: 142.26378pt x 142.25865pt.
  [6] [7 <./figure/2nd.png (PNG copy)> <./figure/3rd.png (PNG copy)> <./figure/4
 th.png (PNG copy)> <./figure/5th.png (PNG copy)> <./figure/6th.png (PNG copy)> 
 <./figure/7th.png (PNG copy)> <./figure/Kuntzm6.png (PNG copy)> <./figure/Butch
-er4.png (PNG copy)> <./figure/Butcher6.png (PNG copy)>] [8]
+er4.png (PNG copy)> <./figure/Butcher6.png (PNG copy)>] [8] [9] <figure/3rd_tra
+n.png, id=204, 968.61874pt x 968.61874pt>
+File: figure/3rd_tran.png Graphic file (type png)
+
+<use figure/3rd_tran.png>
+Package pdftex.def Info: figure/3rd_tran.png used on input line 415.
+(pdftex.def)             Requested size: 142.26378pt x 142.25665pt.
+
+<figure/4th_tran.png, id=205, 968.61874pt x 968.61874pt>
+File: figure/4th_tran.png Graphic file (type png)
+
+<use figure/4th_tran.png>
+Package pdftex.def Info: figure/4th_tran.png used on input line 416.
+(pdftex.def)             Requested size: 142.26378pt x 142.25665pt.
+
+<figure/5th_tran.png, id=206, 968.61874pt x 968.61874pt>
+File: figure/5th_tran.png Graphic file (type png)
+
+<use figure/5th_tran.png>
+Package pdftex.def Info: figure/5th_tran.png used on input line 417.
+(pdftex.def)             Requested size: 142.26378pt x 142.25665pt.
+
+<figure/6th_tran.png, id=207, 968.61874pt x 968.61874pt>
+File: figure/6th_tran.png Graphic file (type png)
+
+<use figure/6th_tran.png>
+Package pdftex.def Info: figure/6th_tran.png used on input line 420.
+(pdftex.def)             Requested size: 142.26378pt x 142.25665pt.
+
+<figure/7th_tran.png, id=208, 968.61874pt x 968.61874pt>
+File: figure/7th_tran.png Graphic file (type png)
+
+<use figure/7th_tran.png>
+Package pdftex.def Info: figure/7th_tran.png used on input line 421.
+(pdftex.def)             Requested size: 142.26378pt x 142.25665pt.
+
+! Extra }, or forgotten \endgroup.
+\@endfloatbox ...pagefalse \outer@nobreak \egroup 
+                                                  \color@endbox 
+l.424 \end{figure}
+                  
+? 
+
+Package natbib Warning: Citation `Seinfeld1970Review' on page 10 undefined on i
+nput line 430.
+
+
+Package natbib Warning: Citation `Prothero1974On' on page 10 undefined on input
+ line 430.
+
+[10]
 
 ! Package amsmath Error: Erroneous nesting of equation structures;
 (amsmath)                trying to recover with `aligned'.
@@ -988,10 +1038,12 @@ See the amsmath package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.356 \end{align}
+l.489 \end{align}
                  
 ? 
-[9] (./article_918.bbl
+[11 <./figure/3rd_tran.png (PNG copy)> <./figure/4th_tran.png (PNG copy)> <./fi
+gure/5th_tran.png (PNG copy)> <./figure/6th_tran.png (PNG copy)> <./figure/7th_
+tran.png (PNG copy)>] [12] (./article_918.bbl
 ! Misplaced alignment tab character &.
 l.23   Computers &
                    Mathematics with Applications 35~(9) (1998) 59â€“64.
@@ -1008,10 +1060,8 @@ l.27 ...tep method for stiff problems, Computers &
 l.32   Mathematics &
                      Computation 163~(2) (2005) 525--545.
 ? 
-[10]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
-
 ! Misplaced alignment tab character &.
 l.36   series method, Applied Mathematics &
                                             Computation 217~(20) (2011) 7940...
@@ -1021,29 +1071,33 @@ l.36   series method, Applied Mathematics &
 l.40   stiff reacting flows, Computers &
                                          Fluids 157.
 ? 
-) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 439.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 439.
+)
+
+Package natbib Warning: There were undefined citations.
+
+[13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 572.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 572.
  (./article_918.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 439.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 439.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 572.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 572.
 Package rerunfilecheck Info: File `article_918.out' has not changed.
-(rerunfilecheck)             Checksum: 515A51C61B6EAE5693788446EBFA267E;964.
+(rerunfilecheck)             Checksum: 3FD281D588AE263C26E578D29BBCFEE9;1296.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 439.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 572.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 43 ({)
+### simple group (level 1) entered at line 42 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 19977 strings out of 494497
- 369036 string characters out of 6172400
- 444081 words of memory out of 5000000
- 22926 multiletter control sequences out of 15000+600000
+ 20030 strings out of 494497
+ 369893 string characters out of 6172400
+ 445335 words of memory out of 5000000
+ 22955 multiletter control sequences out of 15000+600000
  18186 words of font info for 69 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
  55i,16n,56p,1195b,1014s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1066,10 +1120,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on article_918.pdf (11 pages, 302064 bytes).
+Output written on article_918.pdf (13 pages, 352294 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 73 named destinations out of 1000 (max. 500000)
- 162 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 332 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 
