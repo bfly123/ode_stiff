@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -42,5 +42,24 @@ L.~Liu, Y.~Shen, S.~Liu, M.~Yu, The dual information preserving method for
 \bibitem{Hairer1987Solving}
 E.~Hairer, G.~Wanner, Solving ordinary differential equations ii, Bulletin Des
   Sciences Mathematiques 137~(2) (1987) 189--214.
+
+\bibitem{Seinfeld1970Review}
+J.~H. Seinfeld, L.~Lapidus, M.~Hwang, Review of numerical integration
+  techniques for stiff ordinary differential equations, Industrial &
+  Engineering Chemistry Fundamentals 9~(2).
+
+\bibitem{Prothero1974On}
+A.~Prothero, A.~Robinson, On the stability and accuracy of one-step methods for
+  solving stiff systems of ordinary differential equations, Mathematics of
+  Computation 28~(125) (1974) 145--162.
+
+\bibitem{HairerE1988Er}
+R.~M. Hairer~E, Lubich~C, Error of runge-kutta methods for stiff problems
+  studied via differential algebraic equations, BIT Numerical Mathematics
+  28~(3) (1988) 678--700.
+
+\bibitem{Hairer1999Stiff}
+E.~Hairer, G.~Wanner, Stiff differential equations solved by radau methods, in:
+  on Numerical Methods for Differential Equations, 1999, pp. 93--111.
 
 \end{thebibliography}

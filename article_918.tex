@@ -128,20 +128,25 @@ For convenience, the subscript $n$  in  $y_n$ is omitted.
   \frac{1}{2}\frac{d^2y}{dt^2}+a_1\frac{dy}{dt}=0,
   \end{equation}
 then equation (\ref{eq:pEuler}) has second-order accuracy. Similarly, we can get higher order schemes by elimination more terms, thus we have 
-\begin{equation}
+\begin{equation}\label{eq:ai}
   \begin{aligned}
 	a_1 =&- \frac{y''}{2y'}\\
-	a_2=& \frac{y''^2}{4y'^2}-\frac{y'''}{6y'}\\
-	a_3=&-\frac{y^{(4)}}{24y'}-\frac{y''^3}{8y'^3}+\frac{y'''y''}{12y'^2}\\
+	a_2=&-\frac{y'''}{6y'}-\frac{a_1y''}{2y'}\\
+	a_3=&-\frac{y^{(4)}}{24y'}-\frac{a_1y'''}{6y'}-\frac{a_2y''}{2y'}\\
 	\cdots
 	\end{aligned}
 	\end{equation}
+$a_i$ can also be written in the form
+\begin{equation}
+  a_i=-\sum_{n=1}^i \frac{y^{(n+1)}a_{i-n}}{(n+1)!y'}
+  \end{equation}
+where, $a_0=1$ .
 
 Then we can get the N-th order NP schemes as 
 \begin{equation}
   y_{n+1}=y_n+\frac{\Delta tf(t,y_n)}{p_N},
   \end{equation}
-  where, $p=\sum_{i=1}^N 1+a_i \Delta t^i$
+  where, $p=\sum_{i=0}^N a_i \Delta t^i$
 
 
   As far, we have constructed the NP schemes, however those schemes may not stable enough in every order. We still can do some skills to tranform $p_N$ with $\overline{p_N}$ to improve the stability, where
@@ -246,7 +251,7 @@ The stable domains of N-th order NP schemes and implicit Runge-Kutta methods are
 	\caption{Stability domains for NP schemes }
 	\label{fig1}
 \end{figure}
-\section{Transformed coefficients NP method}  
+\section{Transformed coefficients NP method} \label{chap:tran} 
 Although the NP methods have  the similar stability with the implicit Runge-Kutta methods, but  not all of them can  achieve  A-stability and none of them reaches L-stability. We still hope for a more stable property of NP method.     
 A possible way is  to construct a new perturbation term $\overline{p_N}$ by transforming  the coeffients in it.
 
@@ -414,7 +419,7 @@ Order & $R(h)$\\
   \centering
 				  \includegraphics[width=5cm]{3rd_tran.png}
 				  \includegraphics[width=5.cm]{4th_tran.png}
-					\includegraphics[width=5.cm]{5th_tran.png}}
+					\includegraphics[width=5.cm]{5th_tran.png}
 
 					\centering
 				  \includegraphics[width=5.cm]{6th_tran.png}
@@ -436,13 +441,11 @@ Example 1 \cite{Seinfeld1970Review,Prothero1974On}
   \end{aligned}
   \end{equation}
 
-  In this example we consider the order changing  with different stiffness which determined  by $\Delta x \lambda$. For the method without stiff stability, the order will drop significantly when $\Delta x \lambda$ is large. 
+  In this example we consider the error and the convergence order changing with different stiffness which is determined  by $\Delta x \lambda$. For the method without stiff stability, the error will be significantly increasing and even breakup  when $\Delta x \lambda$ is large. 
 
   For Eq.(\ref{eq:3}) the high-order derivatives are
 \begin{equation}
-  y^{(n)}=g^{(n)}+\lambda (y^{(n-1)}-g^{(n-1)}) , \hspace{0.3cm} n=2,3,\cdots
-  y'=(9+x)e^{-x}+\lambda [y-10+(10+x)]e^{-x}\\
-  y''=(9+x)e^{-x}+\lambda [y-10+(10+x)]e^{-x}\\
+  y^{(n)}=g^{(n)}+\lambda^n (y-g) , \hspace{0.3cm} n=2,3,\cdots
 \end{equation}
 and
 \begin{equation}
@@ -456,71 +459,57 @@ and
   \end{aligned}
   \end{equation}
 
-
-
-
-
-
-
-
-
-
-\begin{equation}
- \frac{ 1+ b_1 \Delta t+ b_2\Delta t}{1-b_2 \Delta t}= 1+a_1 \Delta t +a_2\Delta t^2 +O(\Delta t^3)
-  \end{equation}
-
-
-
-
-
-
-
-
-
-
-  \subsection{The Taylor series method}
-
+  Then we can get the Perturbation coeffcients $a_i$ by Eq.(\ref{eq:ai}). 
   \begin{equation}
-	y_{n+1} = y_n + \frac{dy}{dt}\Delta t +\frac{1}{2} \frac{d^2y}{dt^2}+\cdots
+	a_1=-\frac{y''}{2y'},\hspace{0.2cm} a_2=\frac{y''^2}{4y'}-\frac{y'''}{6y'},\hspace{0.2cm},\cdots
 	\end{equation}
+	Also the transformed Perturbation coeffcients $b_i$ can be  constructed through the process in Chapter \ref{chap:tran}.
 
-\begin{equation}
-\begin{align}
-  f= Ay\\
-  \frac{dy}{dt}=f=Ay\\
-  \frac{d^2y}{dt^2}= A^2y 
-\end{align}
+	In this example, the step is fixed as $\Delta x =0.2$ and the final time is $t=5.0$	 The errors
+	\begin{equation}
+	  Err= \frac{|y(x)- \text{Exact(t)}|}{|y(x)|} 
   \end{equation}
+ and the convergence orders 
+ \begin{equation} 
+   \text{Order}=\text{log}_2\frac{Err(\Delta x)}{Err(\Delta x/2)}
+ \end{equation}
+ of different order NP methods and transformed NP methods are plotted in Fig.\ref{Fig:seinfeldNP} and Fig.\ref{Fig:seinfeldNPT}.  with a slight stiffness as $-\Delta x \lambda < 1$ all the methods can get their theoretical convergence orders. But when $-\Delta x \lambda >10$, there are significant errors appair with the NP methods, and the results become unacceptable. While the errors computed by the transformed NP methods will increase and then hold steady to a value near $ 10^{-3}$ and the order all convergence to 1 no matter how huge the $\lambda$ becomes.             
 
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{NP_Err.png}
+  \includegraphics[width=8cm]{NP_order.png}
+	\caption{Errors and convergence orders for the Example 1 by  the  NP methods }
+	\label{Fig:seinfeldNP}
+  \end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{NPT_Err.png}
+  \includegraphics[width=8cm]{NPT_order.png}
+	\caption{Errors and convergence orders for the Example 1 by  the transformed  NP methods }
+	\label{Fig:seinfeldNPT}
+  \end{figure}
+
+  Example 2 \cite{HairerE1988Er,Hairer1999Stiff}
   \begin{equation}
-	y_{n+1} = y_n + A y_n \Delta t + A^2\Delta t \frac{1}{2} \frac{d^2y}{dt^2}+\cdots
-	\end{equation}
+	\begin{aligned}
+	&y_1'=y_2,\hspace{0.2cm} y_1(0)=2,\\
+	&\varepsilon y_2'=(1-y_1^2)y_2-y_1, \hspace{0.2cm}y_2(0)=0,\hspace{0.3cm} \varepsilon=10^{-6}
+   \end{aligned}
+ \end{equation}
+ This exmaple is known as the famous Van der Pol's equation which is very stiff.
 
 
- In this paper, we try to develop a high-order stiff-stable explicit numerical method 
 
 This paper is organized as follows. In section 2, we briefly introduce the decoupling method for solving the reactive Euler equations. In section 3, a dual information preserving method is proposed to solve the convection step of species mass fraction equations. In section 4, a numerical perturbation method is developed to solve the fractionated reaction step, analysis of stability and numerical examples are also presented. A series of examples, including one- and two- dimensional problems, simplified reaction model and multi-species reaction models, are given to validate the accuracy and robustness of the new method in section 5. Conclusions are shown in section 6.
 This equations is easy to solve for  
 
 
-\section{Numerical perturbation method}
 
-For Eq(\ref{eq:ode}), one of  the simplest scheme is the first-order explcit Euler scheme  
-\begin{equation}\label{eq:euler}
-  \bm{y}_{n+1}- \bm{y}_n = \Delta t f(t,\bm{y})
+\begin{equation}
+  \frac{\partial u}{\partial t}+\nabla \cdot F = S(u)
 \end{equation}
-If we want to improve the accuracy order of scheme (\ref{eq:euler}),  one common method is add 
-
-But as proved by  
-
-A common way to get higher-order accuracy it to use sub-timestep in the intercal $[t,t+\Delta t]$,    with the stable property in an explicit scheme  is to construct unlinear schemes with more derivative informations from the original differential equation (\ref{eq:ode}) 
-
-First, more dericative information can be get from the original differential equation (\ref{eq:ode}) theoretically 
-
-
-
-
 
 
 
@@ -537,34 +526,6 @@ In this paper, the numerical perturbation (NP) methods are also developed to sol
 
 A series of numerical examples are used to demonstrate the reliability and robustness of the new methods.
 
-%^The key idea of this method is
-%^
-%^(1) the particle information, including the current cell number (particle moved in), relative location
-%^to the centre of current cell, and the species mass fraction on the point, is calculated and
-%^stored. While the cell information only record the position to the cell centre 
-%^and the species mass fraction of the cell.  
-%^
-%^(2) For a fixed cell, if there are information points in it, its information is
-%^updated by averaging all paticle points’ information; otherwise, the cell’s information
-%^is updated by averaging all entered cell points’ information. If there is none of above
-%^two points in a cell, its relative location of the cell point is set to zero and the species mass on it are obtained by interpolating those of contiguous cells. 
-%^
-%By the new method, the correct activate position of the reaction will be captured even with a course mesh as eliminating the dissapation in the species mass fraction equations. The DIP method is easily extended to multiple reaction models and multi-dimensional problems. Through decoupling process, this method can combine with high order methods for Euler equations system, conveniently. In this paper, numerical perturbation method is also developed to solve the fractioned reaction step (ODE equations) to improve the stability and efficiency. A series of numerical examples are used to test the reliability and robustness of the new methods.  
-%In the furture, the DIP method may also be used in traditional interface(surface) problems and reaction flows with more complex reaction models.
-%
-
-
-%In addition, a numerical perturbation method to solve the fractioned reaction step (ODE equation) to improve the stability and
-%efficiency.
-
-
-
-
-
-%we developed a series of high-order numerical perturbation method for stiff ODE equations and Dual Information Preserving(DIP) method for mass fraction convection equations to capture the reaction interface. Combine them and use a new decoupling method we gave a solving system for reactive Euler equations with high order. We can cure the difficulty in numerical simulations of the conservation equations with stiff source terms by the new solving system.  
-
-%With a decoupling method we decouple reactive Euler equations into two parts---Euler equations and mass fraction convection/reaction equations, Euler equations can be solved by fifth-order WENO/third-order Runge-Kutta schemes with a Lax-Friedrichs splitting. Then using fraction step method, we split mass fraction equations into two steps: convection step and reaction step. Third-order transformed perturbation(TP) method is used in solving reaction step ODE equations which is proved to be strong A-stable. Convection step is solved by Dual Information Preserving(DIP) method which uses Lagrangian points based on fixed mesh. Eliminating unphysical smooth in the mass fraction discontinuous caused by the dissipation of spatial difference schemes in convection step, the wrong activation of reaction will not happened. Through a lot numerical examples, includes scalar problems and reactive Euler problems, one- and two- dimension detonation problems, single reaction models and multiple reaction models, the availability and robustness of the new method is tested.
-
 \section*{Acknowledgement} 
 This research work was supported by NSFC 11272324, 11272325, NSAF U1530145 and 2016YFA0401200.
 
@@ -576,9 +537,5 @@ This research work was supported by NSFC 11272324, 11272325, NSAF U1530145 and 2
 
 
 
-
-
-
-\end{note}
 
 

@@ -1,17 +1,15 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{The numerical perturbation method}{}% 2
-\BOOKMARK [1][-]{section.3}{Stable analysis of the NP schemes}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{A-stable and L-stable}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{Stable functions of the NP schemes}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{Stability domains of NP schemes}{section.3}% 6
-\BOOKMARK [1][-]{section.4}{Transformed coefficients NP method}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{ The third-order transformed NP method}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{The fourth-order transformed NP method}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.3}{The fifth-order transformed NP methods}{section.4}% 10
-\BOOKMARK [2][-]{subsection.4.4}{The sixth-order transformed NP method}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.5}{The seven-order transformed NP methods}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{The stability analysis of the transformed NP method}{}% 13
-\BOOKMARK [1][-]{section.6}{Numerical tests for the NP methods and the transformed NP methods}{}% 14
-\BOOKMARK [2][-]{subsection.6.1}{The Taylor series method}{section.6}% 15
-\BOOKMARK [1][-]{section.7}{Numerical perturbation method}{}% 16
-\BOOKMARK [1][-]{section.8}{Conclusions}{}% 17
+\BOOKMARK [1][-]{section.2}{The\040numerical\040perturbation\040method}{}% 2
+\BOOKMARK [1][-]{section.3}{Stable\040analysis\040of\040the\040NP\040schemes}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{A-stable\040and\040L-stable}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Stable\040functions\040of\040the\040NP\040schemes}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Stability\040domains\040of\040NP\040schemes}{section.3}% 6
+\BOOKMARK [1][-]{section.4}{Transformed\040coefficients\040NP\040method}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{\040The\040third-order\040transformed\040NP\040method}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.2}{The\040fourth-order\040transformed\040NP\040method}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.3}{The\040fifth-order\040transformed\040NP\040methods}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.4}{The\040sixth-order\040transformed\040NP\040method}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.5}{The\040seven-order\040transformed\040NP\040methods}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{The\040stability\040analysis\040of\040the\040transformed\040NP\040method}{}% 13
+\BOOKMARK [1][-]{section.6}{Numerical\040tests\040for\040the\040NP\040methods\040and\040the\040transformed\040NP\040methods}{}% 14
+\BOOKMARK [1][-]{section.7}{Conclusions}{}% 15
